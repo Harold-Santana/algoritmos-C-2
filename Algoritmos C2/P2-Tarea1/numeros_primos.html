@@ -1,0 +1,19 @@
+<script>
+       let n=0, c=2;
+    n=prompt('ingrese n');
+    n = Number(n);
+    while(n % c && n > 1){
+        c++;
+    }
+    if(c==n){
+        document.write(n," es primo",'<br>');
+    }else{
+        document.write(n," no es primo",'<br>');
+    }
+    //Esto no se pedia en la tarea
+    if(n%2==0){
+        document.write(n," es par");
+    }else{
+        document.write(n," es impar");
+    }
+</script>

@@ -1,0 +1,37 @@
+<script>
+    let hora=0, minuto=0, segundo=0;
+    let s=0, h1=0, m1=0;
+    hora=Number(prompt("ingrese hora: "));
+    mininuto=Number(prompt("ingrese minutos: "));
+    segundo=Number(prompt("ingrese segundos: "));
+    while(hora < 24){
+        while (minuto < 60) {
+            while(segundo < 60){
+                if(segundo < 10){
+                    s=0;
+                }else{
+                    s=" ";
+                }
+                if(minuto < 10){
+                    m1=0;
+                }else{
+                    m1=" ";
+                }
+                if(hora < 10){
+                    h1=0;
+                }else{
+                    h1=" ";
+                }
+                document.write(h1,hora,":",m1,minuto,":",s,segundo);
+                segundo++;
+            }
+            minuto++;
+            segundo=0;
+        }
+        hora++;
+        minuto=0;
+        if(hora = 24){
+            hora=0;
+        }
+    }
+</script>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reloj</title>
+</head>
+<body>
+    <div id="reloj"></div>
+
+    <script>
+        let hora = 0, minuto = 0, segundo = 0;
+        let s = 0, h1 = 0, m1 = 0;
+        let intervalo;
+
+        function mostrarHora() {
+            if (segundo < 10) {
+                s = 0;
+            } else {
+                s = " ";
+            }
+            if (minuto < 10) {
+                m1 = 0;
+            } else {
+                m1 = " ";
+            }
+            if (hora < 10) {
+                h1 = 0;
+            } else {
+                h1 = " ";
+            }
+
+            document.getElementById('reloj').textContent = h1 + hora + ":" + m1 + minuto + ":" + s + segundo;
+        }
+
+        function actualizarHora() {
+            mostrarHora();
+            segundo++;
+            if (segundo === 60) {
+                segundo = 0;
+                minuto++;
+                if (minuto === 60) {
+                    minuto = 0;
+                    hora++;
+                    if (hora === 24) {
+                        hora = 0;
+                    }
+                }
+            }
+        }
+
+        function iniciarReloj() {
+            hora = Number(prompt("Ingrese hora: "));
+            minuto = Number(prompt("Ingrese minutos: "));
+            segundo = Number(prompt("Ingrese segundos: "));
+
+            mostrarHora();
+            intervalo = setInterval(actualizarHora, 1000);// Aqui acutalizo la hora  sin saltar hacia abajo "dentro del reloj"
+        }
+
+        iniciarReloj();
+    </script>
+</body>
+</html>

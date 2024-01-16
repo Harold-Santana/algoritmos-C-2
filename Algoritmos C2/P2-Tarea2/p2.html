@@ -1,0 +1,20 @@
+<script>
+// Realizar un algoritmo que presente los 10 primeros números Fibonacci y cuente cuantos pares e 
+// impares hay
+
+    let a=0, b=0, c=1, par=0, impar=0, i=0;
+    while(i < 10){
+        document.write(c,'<br>');
+        if(c % 2 == 0){
+            par++;
+        }else{
+            impar++
+        }
+        a=b; 
+        b=c;
+        c=a+b;
+        i++
+    }
+    document.write("pares encontrados: ", par,'<br>');
+    document.write("impares encontrados: ",impar);
+</script>

@@ -1,0 +1,26 @@
+<script>
+// Realizar un algoritmo que imprima los N primeros primos además la suma y promedio de ellos.
+
+    let fibo=0, a=1, b=0, c=0;
+    let i=0, cp=0, suma=0, Prom=0;
+    while(i < 10){
+        fibo=a+b;
+        c=2;
+        if(fibo > 1){
+            while(fibo%c !=0){
+                c++;
+            }
+            if(fibo==c){
+                document.write(fibo,'<br>');
+                suma=suma+fibo;
+                cp++
+            }
+        }
+        a=b;
+        b=fibo;
+        i++;
+    }
+    Prom=suma/cp;
+    document.write("suma: ",suma,'<br>');
+    document.write("promedio: ",Prom);
+</script>

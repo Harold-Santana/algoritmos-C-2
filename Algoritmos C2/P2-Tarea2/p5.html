@@ -1,0 +1,41 @@
+<script>
+// Realizar un algoritmo que presente los números primos de los 10 primeros Fibonacci y además la suma 
+// y promedio
+
+    let a = 0, b = 0, c = 1;
+    let i = 0;
+    let numerosFibonacci = [];
+
+    while (i < 10) {
+        numerosFibonacci.push(c);
+        a = b;
+        b = c;
+        c = a + b;
+        i++;
+    }
+
+    document.write("<h4>Números primos en los primeros 10 números de Fibonacci:</h4>");
+    let sumaPrimos = 0;
+    let cantidadPrimos = 0;
+
+    for (let j = 0; j < numerosFibonacci.length; j++) {
+        let num = numerosFibonacci[j];
+        let cont = 0;
+
+        for (let x = 1; x <= num; x++) {
+            if (num % x === 0) {
+                cont++;
+            }
+        }
+
+        if (cont === 2) {
+            document.write(num, '<br>');
+            sumaPrimos += num;
+            cantidadPrimos++;
+        }
+    }
+    let promedioPrimos = cantidadPrimos > 0 ? sumaPrimos / cantidadPrimos : 0;
+
+    document.write("<h4>Suma de los números primos:</h4>", sumaPrimos, '<br>');
+    document.write("<h4>Promedio de los números primos:</h4>", promedioPrimos);
+</script>

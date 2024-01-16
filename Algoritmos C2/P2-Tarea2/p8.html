@@ -1,0 +1,29 @@
+<script>
+// Se desea ingresar los siguientes datos.
+// ● nombre del vendedor
+// ● sueldo básico
+// ● las ventas realizadas en el mes:
+// ● venta 1
+// ● venta 2
+// ● venta 3
+// Diseñar el diagrama de flujo para calcular el sueldo total al fin de mes, si se sabe que la empresa reconoce 
+// un 10% de comisión sobre el total de las ventas realizadas, se debe imprimir: el total de comisiones y el 
+// sueldo total a recibir.
+var nombre=(prompt("ingrese nombre: "));
+let sueldo_basico=Number(prompt("ingrese sueldo: "));
+let comisiones=0, total_venta=0;
+let cont=0, limite=3;
+while(cont<limite){
+    let venta=Number(prompt("ingrese valor de la venta realizada: "));
+    total_venta=total_venta+venta;
+    cont++;
+}
+//para calcular la comision de las 3 ventas
+comisiones=total_venta*0.10;
+//sueldo final
+let sueldo_final=0;
+sueldo_final=sueldo_basico+comisiones;
+document.write("Hola ",nombre,'<br>');
+document.write("El total de comision por las 3 ventas es de: ",comisiones,'$','<br>');
+document.write("El sueldo total será de: ",sueldo_final,'$');
+</script>

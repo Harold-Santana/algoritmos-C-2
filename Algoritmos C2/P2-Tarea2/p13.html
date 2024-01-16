@@ -1,0 +1,47 @@
+<script>
+//Desarrolle un algoritmo que lea cuatro números diferentes y a continuación imprima el mayor 
+//de los cuatro números introducidos y también el menor de ellos. 
+let limite=4, cont=1;
+let a=0, b=0, c=0, d=0;
+while(cont <= limite){
+    let num=Number(prompt("ingrese numeró: "));
+    if(cont===1){
+         a=num;
+    }
+    if(cont===2){
+         b=num;
+    }
+    if(cont===3){
+         c=num;
+    }
+    if(cont===4){
+        d=num;
+    }
+    cont++;
+}
+//Determinamos el mayor
+let mayor=a;
+if(b>mayor){
+    mayor=b;
+}
+if(c>mayor){
+    mayor=c;
+}
+if(d>mayor){
+    mayor=d;
+}
+//Determinamos el menor
+let menor=a
+if(b<menor){
+    menor=b;
+}
+if(c<menor){
+    menor=c;
+}
+if(d<menor){
+    menor=d;
+}
+//Resultados
+document.write("El número mayor = ",mayor,'<br>');
+document.write("El número menor = ",menor);
+</script>

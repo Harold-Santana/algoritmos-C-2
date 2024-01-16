@@ -1,0 +1,16 @@
+<script>
+    //Algoritmo que muestre so el número ingresado es perfecto
+    let n=Number(prompt("ingrese número: "));
+    let i=2, perfecto=0;
+    while(i <= n){
+        if(n % i == 0){
+            perfecto=perfecto+(n/i);
+        }
+        i++
+    }
+    if(perfecto==n){
+        document.write("El número ingresado es perfecto: ",perfecto);
+    }else{
+        document.write("El número ingresado no es perfecto");
+    }
+</script>

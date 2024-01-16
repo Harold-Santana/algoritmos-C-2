@@ -1,0 +1,32 @@
+<script>
+    // Imprimir 10 primos y contar cuantos estan entre 1-10 y 15-25 en ese rango
+    let num = 0,
+        x = 0,
+        cont = 0;
+    let contador1 = 0,
+        contador2 = 0;
+    let n = Number(prompt("Ingrese una cantidad"));
+
+    while (n > 0) {
+        num = num + 1;
+        x = 1;
+        cont = 0;
+        while (x <= num) {
+            if (num % x == 0) {
+                cont++;
+            }
+            x = x + 1;
+        }
+        if (cont == 2) {
+            document.write(num, '<br>');
+            n = n - 1;
+            if (num >= 1 && num <= 10) {
+                contador1++;
+            } else if (num >= 15 && num <= 25) {
+                contador2++;
+            }
+        }
+    }
+    document.write("Números entre 1-10: ", contador1, '<br>');
+    document.write("Números entre 15-25: ", contador2);
+</script>

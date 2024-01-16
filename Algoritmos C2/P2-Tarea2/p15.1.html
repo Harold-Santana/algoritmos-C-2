@@ -1,0 +1,21 @@
+<script>
+    //Algoritmo que muestre los 3 primeros numeros perfectos
+    let cont= 0;
+    let n = 2;
+
+    document.write("Los tres primeros números perfectos son: ",'<br>');
+    while (cont < 3) {
+        let suma = 0;
+        for (let i = 1; i < n; i++) {
+            if (n % i === 0) {
+                suma += i;
+            }
+        }
+        if (suma === n) {
+            document.write(n + " ");
+            cont++;
+        }
+        n++;
+    }
+</script>
+

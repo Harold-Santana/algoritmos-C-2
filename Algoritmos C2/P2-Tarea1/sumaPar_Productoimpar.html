@@ -1,0 +1,16 @@
+<script>
+    let i=1, n=0, N=0;
+    let sumaPar=0, productoImpar=1;
+    n=Number(prompt("ingrese n: "));
+    while (i <= n) {
+        N=Number(prompt("ingrese numero: "));
+        if(N % 2 == 0){
+            sumaPar=sumaPar+N;
+        }else{
+            productoImpar=productoImpar*N;
+        }
+    i++
+    }
+    document.write(" suma de los pares: ", sumaPar,'<br>');
+    document.write("producto de los impares: ", productoImpar,'<br>');
+</script>

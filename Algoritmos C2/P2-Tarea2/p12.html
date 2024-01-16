@@ -1,0 +1,21 @@
+<script>
+//Desarrolle un Algoritmo que lee dos números enteros A y B, imprimir el producto (A * B) y 
+//potencia (𝐴**𝐵) utilizando suma y multiplicación sucesiva.
+let a=Number(prompt("ingrese valor de a: "));
+let b=Number(prompt("ingrese valor de b: "));
+let producto=0, potencia=1;
+//Para producto en suma sucesiva
+let cont=b;
+while(cont > 0){
+    producto=producto+a;
+    cont--;
+}
+//Para potencia
+let count=b;
+while(count > 0){
+    potencia=potencia*a;
+    count--;
+}
+document.write("Calculamos el producto en suma sucesiva = ",producto,'<br>');
+document.write("Calculamos la potencia en multiplicación sucesiva = ",potencia);
+</script>
